@@ -1,5 +1,5 @@
 FLAGS = -Wall
-all: mains maindloop maindrec
+all: mains maindloop maindrec loops
 
 mains: main.o libclassrec.a NumClass.h
 	gcc $(FLAGS) -o mains main.o libclassrec.a
