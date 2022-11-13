@@ -5,8 +5,8 @@ int isPrime(int);
 int isStrong(int);
 
 int isPrime(int x){
-    
-    if (x==1 || x==0) return 0;
+    if(x==1) return 1;
+    if (x==0) return 0;
     for(int i=2;i<x;i++){
         if(x%i==0) return 0;
     }
