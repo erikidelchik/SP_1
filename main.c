@@ -9,15 +9,8 @@ int main(){
 	scanf("%d",&x);
 	scanf("%d",&y);
 	
-	printf("the strong numbers are:");
 	
-	for(int i=x;i<=y;i++){
-	       if(isStrong(i)==1) printf(" %d ",i);
-	}
-	printf("\n");
-	
-	
-	printf("the ArmStrong numbers are:");
+	printf("the Armstrong numbers are:");
 	
 	for(int i=x;i<=y;i++){
 	       if(isArmstrong(i)==1) printf(" %d ",i);
@@ -25,7 +18,7 @@ int main(){
 	printf("\n");
 	
 	
-	printf("the Palindrome numbers are:");
+	printf("the Palindromes are:");
 	
 	for(int i=x;i<=y;i++){
 	       if(isPalindrome(i)==1) printf(" %d ",i);
@@ -37,6 +30,13 @@ int main(){
 	
 	for(int i=x;i<=y;i++){
 	       if(isPrime(i)==1) printf(" %d ",i);
+	}
+	printf("\n");
+	
+	printf("the Strong numbers are:");
+	
+	for(int i=x;i<=y;i++){
+	       if(isStrong(i)==1) printf(" %d ",i);
 	}
 	printf("\n");
 
