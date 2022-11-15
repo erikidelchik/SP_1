@@ -8,25 +8,21 @@ int powL(int,int);
 int isArmstrong(int x){
     if(x==0) return 1;
     int n = x;
-    int c = 0;
+    int len = 0;
+    int c = 0, d=0;
+    int sum = 0;
     while(n!=0){
         n = n /10;
-        c++;
+        len++;
     }
-    int a[c];
-
-    int b = x;
-
-    for(int i=c-1;i>=0;i--){
-        a[i] = b%10;
-        b = b/10;
+    
+    int z = x;
+    while(z!=0){
+    	d = z%10;
+    	sum+=powL(d,len);
+    	z = z/10;
     }
-
-    int sum = 0;
-    for(int i=0;i<c;i++){
-        sum = sum + powL(a[i],c);
-    }
-    if(sum == x) return 1;
+    if(sum==x) return 1;
     return 0;
 
 }
@@ -34,23 +30,25 @@ int isArmstrong(int x){
 int isPalindrome(int x){
     if(x==0) return 1;
     int n = x;
-    int c = 0;
+    int len = 0;
     while(n!=0){
         n = n /10;
-        c++;
+        len++;
     }
-    int b = x;
-    int a[c];
-
-    for(int i=c-1;i>=0;i--){
-        a[i] = b%10;
-        b = b/10;
-    }
-
-    for(int i=0;i<c/2;i++){
-        if(a[i]!=a[c-1-i]) return 0;
+    int left=0,right=0;
+    int z = x;
+    int new=0;
+    while(len>1){
+    	right = left%10;
+    	left = z/(powL(10,len-1));
+    	if(left!=right) return 0;
+    	new = z%(powL(10,len-1));
+    	new = new %10;
+    	z = new;
+    	len = len-2;
     }
     return 1;
+    
 }
 
 int powL(int b,int c){
