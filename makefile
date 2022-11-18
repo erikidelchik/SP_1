@@ -19,10 +19,10 @@ main.o: main.c NumClass.h
 	gcc $(FLAGS) -c main.c
 
 libclassloops.so: basicClassification.o advancedClassificationLoop.o
-	gcc -shared -o libclassloops.so basicClassification.o advancedClassificationLoop.o
+	gcc -shared -fPIC -o libclassloops.so basicClassification.o advancedClassificationLoop.o
 
 libclassrec.so: basicClassification.o advancedClassificationRecursion.o
-	gcc -shared -o libclassrec.so basicClassification.o advancedClassificationRecursion.o
+	gcc -shared -fPIC -o libclassrec.so basicClassification.o advancedClassificationRecursion.o
 
 libclassrec.a: basicClassification.o advancedClassificationRecursion.o
 	ar -rcs libclassrec.a basicClassification.o advancedClassificationRecursion.o
