@@ -9,7 +9,7 @@ int isArmstrong(int x){
     if(x==0) return 1;
     int n = x;
     int len = 0;
-    int c = 0, d=0;
+    int d=0;
     int sum = 0;
     while(n!=0){
         n = n /10;
