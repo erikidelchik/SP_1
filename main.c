@@ -22,7 +22,7 @@ int main(){
 
 	for(int i=a;i<=b;i++){
 
-		if(isArmstrong(i)) printf(" %d ",i);	
+		if(isArmstrong(i)) printf(" %d",i);	
 
 	}
 
@@ -36,7 +36,7 @@ int main(){
 
 	for(int i=a;i<=b;i++){
 
-		if(isPalindrome(i)) printf(" %d ",i);	
+		if(isPalindrome(i)) printf(" %d",i);	
 
 	}
 
@@ -48,7 +48,7 @@ int main(){
 
 	for(int i=a;i<=b;i++){
 
-		if(isPrime(i)) printf(" %d ",i);	
+		if(isPrime(i)) printf(" %d",i);	
 
 	}
 
@@ -62,7 +62,7 @@ int main(){
 
 	for(int i=a;i<=b;i++){
 
-		if(isStrong(i)) printf(" %d ",i);	
+		if(isStrong(i)) printf(" %d",i);	
 
 	}
 
